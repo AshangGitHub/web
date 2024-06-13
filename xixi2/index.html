@@ -76,6 +76,9 @@
   <!-- <audio autoplay="autopaly">
           <source src="renxi.mp3" type="audio/mp3" />
         </audio> -->
+  <audio autoplay>
+    <audio id="myAudio" src="https://keenon.oss-cn-shanghai.aliyuncs.com/uploads/bg_out.mp3" hidden="true"></audio>
+  </audio>
   <!-- 相册 -->
   <div id="box">
     <div></div>
@@ -91,6 +94,17 @@
     <p></p>
   </div>
   <script>
+    var oAudio=document.getElementById('myAudio');
+    $('body').click(function () {
+      console.log(oAudio  ,'111');
+      if (oAudio.paused)       //paused 属性返回音频/视频是否已暂停。true 指示音频/视频已暂停。否则为 false。
+      {
+        oAudio.play();
+      }
+      // else {
+      //   oAudio.pause();
+      // }
+    })
     setTimeout(init, 100);
     function init() {
       var obox = document.getElementById('box'),
