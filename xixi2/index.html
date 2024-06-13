@@ -94,17 +94,13 @@
     <p></p>
   </div>
   <script>
-    var oAudio=document.getElementById('myAudio');
-    $('body').click(function () {
-      console.log(oAudio  ,'111');
+    var oAudio = document.getElementById('myAudio');
+    document.body.addEventListener('click', function (event) {
       if (oAudio.paused)       //paused 属性返回音频/视频是否已暂停。true 指示音频/视频已暂停。否则为 false。
       {
         oAudio.play();
       }
-      // else {
-      //   oAudio.pause();
-      // }
-    })
+    });
     setTimeout(init, 100);
     function init() {
       var obox = document.getElementById('box'),
